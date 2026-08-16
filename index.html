@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Joakim Eriksson</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Senior researcher working on low-power networking, IoT and edge intelligence.">
+<style>
+  *,*::before,*::after { box-sizing:border-box }
+  :root {
+    --bg:#fbfaf8; --ink:#16181c; --dim:#5c626b; --faint:#8b929c;
+    --line:#e3e1dc; --lift:#fff; --accent:#1f5f7a;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme:dark) {
+    :root { --bg:#121417; --ink:#e8e9ec; --dim:#9aa1ab; --faint:#6f7681;
+            --line:#272b31; --lift:#181b1f; --accent:#6fb4cf }
+  }
+  :root[data-theme="dark"] {
+    --bg:#121417; --ink:#e8e9ec; --dim:#9aa1ab; --faint:#6f7681;
+    --line:#272b31; --lift:#181b1f; --accent:#6fb4cf;
+  }
+  :root[data-theme="light"] {
+    --bg:#fbfaf8; --ink:#16181c; --dim:#5c626b; --faint:#8b929c;
+    --line:#e3e1dc; --lift:#fff; --accent:#1f5f7a;
+  }
+  html { -webkit-text-size-adjust:100% }
+  body { margin:0; background:var(--bg); color:var(--ink); line-height:1.65;
+         font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+         font-size:clamp(15px,.5vw + 14px,17px); }
+  .wrap { max-width:46rem; margin:0 auto; padding:clamp(3rem,10vw,6rem) 1.5rem 4rem }
+
+  header { margin-bottom:clamp(2.5rem,6vw,3.5rem) }
+  h1 { font-size:clamp(1.9rem,4vw,2.6rem); line-height:1.15; margin:0 0 .5rem;
+       letter-spacing:-.02em; font-weight:650 }
+  .tagline { font-family:var(--mono); font-size:.82rem; letter-spacing:.02em;
+             color:var(--dim); margin:0 0 1.4rem }
+  .intro { margin:0; max-width:38rem }
+
+  h2 { font-family:var(--mono); font-size:.72rem; font-weight:500; letter-spacing:.18em;
+       text-transform:uppercase; color:var(--faint); margin:0 0 1rem;
+       padding-top:1.6rem; border-top:1px solid var(--line) }
+  section { margin-top:clamp(2.2rem,5vw,3rem) }
+  p { margin:0 0 1rem }
+  a { color:var(--accent); text-underline-offset:2px }
+  a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:2px }
+
+  .rows { display:flex; flex-direction:column; gap:1px; background:var(--line);
+          border:1px solid var(--line); border-radius:6px; overflow:hidden }
+  .row { background:var(--lift); padding:.95rem 1.1rem; display:grid;
+         grid-template-columns:7.5rem 1fr; gap:1rem; align-items:baseline }
+  .row .k { font-family:var(--mono); font-size:.72rem; letter-spacing:.1em;
+            text-transform:uppercase; color:var(--faint) }
+  .row .v { margin:0 }
+  .row .v .sub { display:block; color:var(--dim); font-size:.92em; margin-top:.15rem }
+  @media (max-width:34rem) { .row { grid-template-columns:1fr; gap:.25rem } }
+
+  ul.plain { list-style:none; margin:0; padding:0; display:flex;
+             flex-direction:column; gap:.6rem }
+  ul.plain li { padding-left:1rem; position:relative; color:var(--ink) }
+  ul.plain li::before { content:""; position:absolute; left:0; top:.62em;
+             width:5px; height:5px; border-radius:50%; background:var(--accent) }
+  ul.plain .sub { color:var(--dim) }
+
+  .links { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.25rem }
+  .links a { display:inline-block; font-family:var(--mono); font-size:.78rem;
+             letter-spacing:.04em; padding:.42rem .8rem; border:1px solid var(--line);
+             border-radius:5px; background:var(--lift); text-decoration:none;
+             color:var(--ink) }
+  .links a:hover { border-color:var(--accent); color:var(--accent) }
+
+  footer { margin-top:clamp(3rem,7vw,4.5rem); padding-top:1.4rem;
+           border-top:1px solid var(--line); font-family:var(--mono);
+           font-size:.74rem; color:var(--faint) }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <h1>Joakim Eriksson</h1>
+    <p class="tagline">Low-power networking · Internet of Things · edge intelligence</p>
+    <p class="intro">I am a senior researcher and unit manager in the Computer Science
+    department at RISE Research Institutes of Sweden in Kista, where I work on
+    connected systems built from constrained devices — how they route, how little energy they can run on, and
+    how much intelligence can be pushed to the edge of the network rather than
+    the cloud.</p>
+  </header>
+
+  <section>
+    <h2>Now</h2>
+    <div class="rows">
+      <div class="row">
+        <span class="k">Role</span>
+        <p class="v">Senior Researcher &amp; Unit Manager, Connected Intelligence
+          <span class="sub">Computer Science, RISE Research Institutes of Sweden · Kista</span></p>
+      </div>
+      <div class="row">
+        <span class="k">Focus</span>
+        <p class="v">Low-power wireless networking, IoT operating systems, edge AI
+          <span class="sub">Scalability, interoperability and reliability under tight memory and energy budgets</span></p>
+      </div>
+      <div class="row">
+        <span class="k">PhD</span>
+        <p class="v">Scalable and Interoperable Low-Power Internet of Things Networks
+          <span class="sub">2023</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contiki and Contiki-NG</h2>
+    <p>Much of my work sits around <strong>Contiki-NG</strong>, an open-source
+    operating system for resource-constrained networked devices, and its
+    ecosystem of simulation and testing tools. It is used widely in research and
+    teaching, and remains one of the more capable platforms for building and
+    evaluating low-power IPv6 networks.</p>
+    <p>The recurring theme across that work is making protocols behave at
+    scale: routing that still converges in dense deployments, memory footprints
+    that fit real hardware, and results that hold up outside a simulator.</p>
+  </section>
+
+  <section>
+    <h2>Research interests</h2>
+    <ul class="plain">
+      <li>Routing and network protocols for low-power lossy networks
+        <span class="sub">— scalability and reliability in dense deployments</span></li>
+      <li>Operating systems for constrained devices
+        <span class="sub">— Contiki-NG, embedded networking stacks, tooling</span></li>
+      <li>Energy efficiency
+        <span class="sub">— duty cycling and lightweight machine-to-machine protocols</span></li>
+      <li>Edge AI and embedded intelligence
+        <span class="sub">— inference on devices too small for the usual assumptions</span></li>
+      <li>Privacy-preserving sensing
+        <span class="sub">— occupancy and activity from thermal imaging rather than cameras</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Elsewhere</h2>
+    <p>I co-founded <strong>Jfokus</strong>, one of the larger developer
+    conferences in the Nordics, and I spend time on side projects that have
+    nothing to do with networking — mostly audio software.</p>
+    <div class="links">
+      <a href="https://github.com/joakimeriksson">GitHub</a>
+      <a href="https://scholar.google.se/citations?user=gQGpfAQAAAAJ">Google Scholar</a>
+      <a href="https://dblp.org/pid/06/6831.html">dblp</a>
+      <a href="https://www.ri.se/en/person/joakim-eriksson">RISE</a>
+      <a href="/ai-smarthome/">Side projects</a>
+    </div>
+  </section>
+
+  <footer>Kista, Stockholm</footer>
+
+</div>
+</html>
